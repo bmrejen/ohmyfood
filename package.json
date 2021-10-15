@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Mon projet OpenClassrooms 3 OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmrejen/ohmyfood.git"
+  },
+  "author": "Benoit Mrejen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmrejen/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/bmrejen/ohmyfood#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.43.2"
+  }
+}
