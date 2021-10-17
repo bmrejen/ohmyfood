@@ -1,5 +1,5 @@
-@use "../utils/zoom" as *;
-@use "../utils/box-shadow" as *;
+@use "../utils/box-shadow";
+@use "../utils/zoom";
 
 .tuto {
   & ol {
@@ -16,9 +16,9 @@
     border: 1px solid red;
     flex-grow: 1;
     border-radius: 1rem;
-    @include base-shadow;
+    @include box-shadow.base-shadow;
     &:hover {
-      @include transform-zoom;
+      @include zoom.transform-zoom;
     }
   }
 }
