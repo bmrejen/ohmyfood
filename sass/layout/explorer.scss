@@ -1,9 +1,8 @@
-@use "../utils/box-shadow";
+@use "../utils/mixins";
 
 .explorer {
   text-align: center;
   & h2 {
-    margin-top: 2rem;
     font-size: 2rem;
   }
   & p {
@@ -16,10 +15,10 @@
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
     transition: transform 200ms;
     margin-top: 1rem;
-    @include box-shadow.base-shadow;
+    @include mixins.base-shadow;
+    @include mixins.gradient;
   }
   & button:hover {
     transform: scale(1.02);
