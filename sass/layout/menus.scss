@@ -2,63 +2,53 @@
 @use "../utils/colors";
 @use "../utils/mixins";
 
-.menus {
-  background-color: #f6f6f6;
-  margin-bottom: 2rem;
+#homepage {
+  .menus {
+    background-color: #f6f6f6;
+    margin-bottom: 2rem;
 
-  .menus__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    @media (max-width: variables.$breakpoint) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .new {
-      position: relative;
-    }
-    .new::before {
-      content: "Nouveau";
-      position: absolute;
-      height: 2rem;
-      width: 5rem;
-      background-color: colors.$color-tertiary;
-      color: darken(colors.$color-tertiary, 50%);
+    .menus__cards {
       display: grid;
-      place-items: center;
-      right: 1rem;
-      top: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      @media (max-width: variables.$breakpoint) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .new {
+        position: relative;
+      }
+      .new::before {
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color: colors.$color-tertiary;
+        color: darken(colors.$color-tertiary, 50%);
+        display: grid;
+        place-items: center;
+        right: 1rem;
+        top: 1rem;
+      }
     }
-  }
 
-  .card {
-    &__image {
-      height: 15rem;
-      border-radius: 1rem 1rem 0 0;
-      background-size: cover;
-    }
-    @for $i from 1 through 4 {
-      &__image-#{$i} {
-        background-image: url("../../assets/menu-#{$i}.jpg");
+    .card {
+      &__image {
+        height: 15rem;
+        border-radius: 1rem 1rem 0 0;
+        background-size: cover;
+        background-position: center;
       }
-    }
-    &__description {
-      position: relative;
-      background-color: white;
-      border-radius: 0 0 1rem 1rem;
-      &::before {
-        @include mixins.heart;
+      @for $i from 1 through 4 {
+        &__image-#{$i} {
+          background-image: url("../../assets/menu-#{$i}.jpg");
+        }
       }
-      &::after {
-        @include mixins.heart($opacity: 0, $font-weight: 900, $color: transparent);
-        @include mixins.gradient(1);
-      }
-      &:hover::after {
-        opacity: 1;
-        transform: translateY(-50%) scale(1.1);
-      }
-      h3,
-      p {
-        padding: 0.3rem;
+      &__description {
+        @include mixins.heart-animated;
+        h3,
+        p {
+          padding: 0.3rem;
+        }
       }
     }
   }
