@@ -1,0 +1,11 @@
+title: OhMyFood
+tagline: A Sass project with animations
+description: >-
+  Learn how to create a site or blog from your GitHub repositories with GitHub
+  Pages.
+tags:
+  - Sass
+  - Animations
+template:
+  name: ohmyfood
+  repo: ohmyfood
